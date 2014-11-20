@@ -170,7 +170,7 @@ namespace MonophonicCodes
 									"Пропорциональное шифрование",
 									"Многоалфавитные подстановки"});
 			this.toolStripComboBox1.Name = "toolStripComboBox1";
-			this.toolStripComboBox1.Size = new System.Drawing.Size(150, 25);
+			this.toolStripComboBox1.Size = new System.Drawing.Size(250, 25);
 			this.toolStripComboBox1.Text = "Пропорциональное шифрование";
 			// 
 			// toolStripSeparator3
@@ -295,7 +295,7 @@ namespace MonophonicCodes
 			this.tabPage4.Location = new System.Drawing.Point(4, 22);
 			this.tabPage4.Name = "tabPage4";
 			this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage4.Size = new System.Drawing.Size(735, 189);
+			this.tabPage4.Size = new System.Drawing.Size(735, 125);
 			this.tabPage4.TabIndex = 1;
 			this.tabPage4.Text = "Результат частотного анализа";
 			this.tabPage4.UseVisualStyleBackColor = true;
@@ -305,7 +305,7 @@ namespace MonophonicCodes
 			this.richTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox5.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox5.Name = "richTextBox5";
-			this.richTextBox5.Size = new System.Drawing.Size(729, 183);
+			this.richTextBox5.Size = new System.Drawing.Size(729, 119);
 			this.richTextBox5.TabIndex = 0;
 			this.richTextBox5.Text = "";
 			// 
@@ -315,7 +315,7 @@ namespace MonophonicCodes
 			this.tabPage5.Location = new System.Drawing.Point(4, 22);
 			this.tabPage5.Name = "tabPage5";
 			this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage5.Size = new System.Drawing.Size(735, 189);
+			this.tabPage5.Size = new System.Drawing.Size(735, 125);
 			this.tabPage5.TabIndex = 2;
 			this.tabPage5.Text = "Таблица пропорционального шифра";
 			this.tabPage5.UseVisualStyleBackColor = true;
@@ -326,7 +326,7 @@ namespace MonophonicCodes
 			this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox3.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox3.Name = "richTextBox3";
-			this.richTextBox3.Size = new System.Drawing.Size(729, 183);
+			this.richTextBox3.Size = new System.Drawing.Size(729, 119);
 			this.richTextBox3.TabIndex = 0;
 			this.richTextBox3.Text = "";
 			// 

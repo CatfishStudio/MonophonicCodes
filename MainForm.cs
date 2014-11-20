@@ -8,9 +8,11 @@
  */
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
+
 
 namespace MonophonicCodes
 {
@@ -30,6 +32,28 @@ namespace MonophonicCodes
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		/* Структура буквы */
+		public struct Letter
+		{
+			public string name;
+			public int count;
+			public string[] variantsReplacement;
+			
+			public Letter(String _name, int _count) // конструктор
+			{
+				name = _name;
+				count = _count;
+				variantsReplacement = new string[count];
+			}
+			
+			public void addValue(int _index, string _value) // метод
+			{
+				variantsReplacement[_index] = _value;
+			}
+		}
+		
+		public List<Letter> alphabet = new List<Letter>();
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
@@ -59,7 +83,8 @@ namespace MonophonicCodes
                 a=Math.Round(a,5);
                 double b=Math.Round( -1*a*Math.Log(a,2),5);
                 richTextBox5.Text += "  " + count.Value + "                     " + count.Count + "          " +a+"\n\r";
- 				
+                alphabet.Add(new Letter(count.Value.ToString(), count.Count));
+                MessageBox.Show(alphabet[0].name);
             }
 		}
 		
