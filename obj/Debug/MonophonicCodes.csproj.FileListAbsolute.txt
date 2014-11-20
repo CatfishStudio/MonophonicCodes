@@ -5,3 +5,10 @@ C:\GIT\MonophonicCodes\obj\Debug\MonophonicCodes.MainForm.resources
 C:\GIT\MonophonicCodes\obj\Debug\MonophonicCodes.csproj.GenerateResource.Cache
 C:\GIT\MonophonicCodes\obj\Debug\MonophonicCodes.exe
 C:\GIT\MonophonicCodes\obj\Debug\MonophonicCodes.pdb
+C:\Program Code\Git\MonophonicCodes\bin\Debug\MonophonicCodes.exe
+C:\Program Code\Git\MonophonicCodes\bin\Debug\MonophonicCodes.pdb
+C:\Program Code\Git\MonophonicCodes\obj\Debug\MonophonicCodes.csprojResolveAssemblyReference.cache
+C:\Program Code\Git\MonophonicCodes\obj\Debug\MonophonicCodes.MainForm.resources
+C:\Program Code\Git\MonophonicCodes\obj\Debug\MonophonicCodes.csproj.GenerateResource.Cache
+C:\Program Code\Git\MonophonicCodes\obj\Debug\MonophonicCodes.exe
+C:\Program Code\Git\MonophonicCodes\obj\Debug\MonophonicCodes.pdb
