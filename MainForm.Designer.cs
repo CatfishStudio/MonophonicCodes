@@ -42,6 +42,7 @@ namespace MonophonicCodes
 			this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+			this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
 			this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
@@ -108,7 +109,8 @@ namespace MonophonicCodes
 			// statusStrip1
 			// 
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.toolStripStatusLabel1});
+									this.toolStripStatusLabel1,
+									this.toolStripStatusLabel2});
 			this.statusStrip1.Location = new System.Drawing.Point(0, 324);
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.Size = new System.Drawing.Size(743, 22);
@@ -118,8 +120,15 @@ namespace MonophonicCodes
 			// toolStripStatusLabel1
 			// 
 			this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-			this.toolStripStatusLabel1.Size = new System.Drawing.Size(166, 17);
-			this.toolStripStatusLabel1.Text = "(с) Сомов Евгений Павлович";
+			this.toolStripStatusLabel1.Size = new System.Drawing.Size(163, 17);
+			this.toolStripStatusLabel1.Text = "© Сомов Евгений Павлович";
+			// 
+			// toolStripStatusLabel2
+			// 
+			this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.Blue;
+			this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+			this.toolStripStatusLabel2.Size = new System.Drawing.Size(61, 17);
+			this.toolStripStatusLabel2.Text = "Действие:";
 			// 
 			// toolStrip1
 			// 
@@ -322,13 +331,14 @@ namespace MonophonicCodes
 			// 
 			// richTextBox3
 			// 
-			this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox3.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox3.Name = "richTextBox3";
 			this.richTextBox3.Size = new System.Drawing.Size(729, 119);
 			this.richTextBox3.TabIndex = 0;
 			this.richTextBox3.Text = "";
+			this.richTextBox3.WordWrap = false;
 			// 
 			// tabPage3
 			// 
@@ -384,6 +394,7 @@ namespace MonophonicCodes
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
 		private System.Windows.Forms.RichTextBox richTextBox5;
 		private System.Windows.Forms.TabPage tabPage4;
 		private System.Windows.Forms.RichTextBox richTextBox4;
