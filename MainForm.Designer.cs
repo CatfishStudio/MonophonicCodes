@@ -39,6 +39,16 @@ namespace MonophonicCodes
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.открытьТектовыйФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.сохранитьРезультатШифрованияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+			this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -96,9 +106,78 @@ namespace MonophonicCodes
 			// 
 			// файлToolStripMenuItem
 			// 
+			this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.открытьТектовыйФайлToolStripMenuItem,
+									this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem,
+									this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem,
+									this.toolStripSeparator5,
+									this.сохранитьРезультатШифрованияToolStripMenuItem,
+									this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem,
+									this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem,
+									this.сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem,
+									this.toolStripSeparator6,
+									this.выходToolStripMenuItem});
 			this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
 			this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
 			this.файлToolStripMenuItem.Text = "Файл";
+			// 
+			// открытьТектовыйФайлToolStripMenuItem
+			// 
+			this.открытьТектовыйФайлToolStripMenuItem.Name = "открытьТектовыйФайлToolStripMenuItem";
+			this.открытьТектовыйФайлToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
+			this.открытьТектовыйФайлToolStripMenuItem.Text = "Открыть тектовый файл.";
+			// 
+			// открытьТаблицуПропорциональногоШифрованияToolStripMenuItem
+			// 
+			this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem.Name = "открытьТаблицуПропорциональногоШифрованияToolStripMenuItem";
+			this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
+			this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem.Text = "Открыть таблицу пропорционального шифра.";
+			// 
+			// открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem
+			// 
+			this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem.Name = "открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem";
+			this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
+			this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem.Text = "Открыть таблицу многоалфавитных подстановок.";
+			// 
+			// toolStripSeparator5
+			// 
+			this.toolStripSeparator5.Name = "toolStripSeparator5";
+			this.toolStripSeparator5.Size = new System.Drawing.Size(352, 6);
+			// 
+			// сохранитьРезультатШифрованияToolStripMenuItem
+			// 
+			this.сохранитьРезультатШифрованияToolStripMenuItem.Name = "сохранитьРезультатШифрованияToolStripMenuItem";
+			this.сохранитьРезультатШифрованияToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
+			this.сохранитьРезультатШифрованияToolStripMenuItem.Text = "Сохранить результат шифрования.";
+			// 
+			// сохранитьРезультатЧастотногоАнализаToolStripMenuItem
+			// 
+			this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem.Name = "сохранитьРезультатЧастотногоАнализаToolStripMenuItem";
+			this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
+			this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem.Text = "Сохранить результат частотного анализа.";
+			// 
+			// сохранитьТаблицуПропорциональногоШифраToolStripMenuItem
+			// 
+			this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem.Name = "сохранитьТаблицуПропорциональногоШифраToolStripMenuItem";
+			this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
+			this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem.Text = "Сохранить таблицу пропорционального шифра.";
+			// 
+			// сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem
+			// 
+			this.сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem.Name = "сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem";
+			this.сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
+			this.сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem.Text = "Сохранить таблицу многоалфавитных посдатонок.";
+			// 
+			// toolStripSeparator6
+			// 
+			this.toolStripSeparator6.Name = "toolStripSeparator6";
+			this.toolStripSeparator6.Size = new System.Drawing.Size(352, 6);
+			// 
+			// выходToolStripMenuItem
+			// 
+			this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+			this.выходToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
+			this.выходToolStripMenuItem.Text = "Выход.";
 			// 
 			// правкаToolStripMenuItem
 			// 
@@ -210,6 +289,7 @@ namespace MonophonicCodes
 			this.toolStripButton2.Name = "toolStripButton2";
 			this.toolStripButton2.Size = new System.Drawing.Size(94, 22);
 			this.toolStripButton2.Text = "Расшифровать";
+			this.toolStripButton2.Click += new System.EventHandler(this.ToolStripButton2Click);
 			// 
 			// toolStripSeparator4
 			// 
@@ -373,7 +453,6 @@ namespace MonophonicCodes
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MainForm";
 			this.Text = "MonophonicCodes  версия 1.0";
-			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.statusStrip1.ResumeLayout(false);
@@ -394,6 +473,16 @@ namespace MonophonicCodes
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+		private System.Windows.Forms.ToolStripMenuItem сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem сохранитьТаблицуПропорциональногоШифраToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem сохранитьРезультатЧастотногоАнализаToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem сохранитьРезультатШифрованияToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+		private System.Windows.Forms.ToolStripMenuItem открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem открытьТаблицуПропорциональногоШифрованияToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem открытьТектовыйФайлToolStripMenuItem;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
 		private System.Windows.Forms.RichTextBox richTextBox5;
 		private System.Windows.Forms.TabPage tabPage4;

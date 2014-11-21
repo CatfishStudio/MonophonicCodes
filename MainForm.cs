@@ -61,7 +61,7 @@ namespace MonophonicCodes
 		}
 		
 		public List<Letter> alphabet = new List<Letter>(); // Таблиа пропорционального шифра
-		
+		public string[] textKey;
 		
 		/* Частотный анализ */
 		void frequencyAnalysis()
@@ -113,10 +113,10 @@ namespace MonophonicCodes
 			}
 		}
 		
-		/* выполнение пропорционального шифрования */
-		void performProportionalCode()
+		/* кодировать пропорциональный шифр */
+		void performEncodeProportionalCode()
 		{
-			toolStripStatusLabel2.Text = "Действие: Выполнение пропорционального шифрования...";
+			toolStripStatusLabel2.Text = "Действие: Кодирование пропорционального шифра...";
 			richTextBox2.Clear();
 			
 			int index = 0;
@@ -136,8 +136,54 @@ namespace MonophonicCodes
 			
 		}
 		
-		void MainFormLoad(object sender, EventArgs e)
+		/* декодировать пропорциональный шифр */
+		void performDecodeProportionalCode()
 		{
+			toolStripStatusLabel2.Text = "Действие: Декодирование пропорционального шифра...";
+			richTextBox2.Clear();
+			
+			int index = 0;
+			string code = "";
+			for(int iRTB = 0; iRTB < richTextBox1.Text.Length; iRTB++){ // символы в тексте
+				if(index == 3 || iRTB == richTextBox1.Text.Length - 1){
+					if(iRTB == richTextBox1.Text.Length -1) code += richTextBox1.Text[iRTB].ToString();
+					MessageBox.Show(code);
+					for(int i = 0; i < alphabet.Count; i++){
+						for(int j = 0; j < alphabet[i].variantsReplacement.Length; j++){
+							if(alphabet[i].variantsReplacement[j].ToString() == code.ToString()){
+								richTextBox2.Text += alphabet[i].name;
+								index = 0;
+								code = "";
+								break;
+							}
+						}
+					}
+				}
+				if(index < 3){
+					code += richTextBox1.Text[iRTB].ToString();
+					index++;
+				}
+			}
+		}
+		
+		
+		/* инициализация алфавита ключа */
+		void initAlphabetKey()
+		{
+			int index = 0;
+			textKey = new string[richTextBox1.Text.Length];
+			for(int i = 0; i < textKey.Length; i++){
+				if(index == toolStripTextBox1.Text.Length){
+					//textKey[i] = toolStripTextBox1.Text[index].ToString();
+					index = 0;
+				}
+				else {
+					textKey[i] = toolStripTextBox1.Text[index].ToString();
+					richTextBox2.Text += toolStripTextBox1.Text[index].ToString();
+					index++;
+				}
+				//richTextBox2.Text += textKey[i].ToString();
+			}
 			
 		}
 		
@@ -146,11 +192,21 @@ namespace MonophonicCodes
 			if(toolStripComboBox1.Text == "Пропорциональное шифрование"){
 				frequencyAnalysis();
 				initProportionalCode();
-				performProportionalCode();
+				performEncodeProportionalCode();
 				toolStripStatusLabel2.Text = "Действие: Пропорциональное шифрование завершено!";
 			}
+			if(toolStripComboBox1.Text == "Многоалфавитные подстановки"){
+				initAlphabetKey();
+			}
 			
-			
+		}
+		
+		void ToolStripButton2Click(object sender, EventArgs e)
+		{
+			if(toolStripComboBox1.Text == "Пропорциональное шифрование"){
+				performDecodeProportionalCode();
+				toolStripStatusLabel2.Text = "Действие: Пропорциональная шифровка завершена!";
+			}
 		}
 	}
 }
