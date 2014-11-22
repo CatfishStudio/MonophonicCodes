@@ -362,5 +362,55 @@ namespace MonophonicCodes
 				toolStripStatusLabel2.Text = "Действие: Многоалфавитная расшифровка завершена!";
 			}
 		}
+		
+		
+		/* Сохранить результат шифрования. */
+		void СохранитьРезультатШифрованияToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			tabControl2.SelectedIndex = 0;
+			saveFileDialog1.FileName = "РезультатШифрования.txt";
+			if(saveFileDialog1.ShowDialog() == DialogResult.OK){
+				richTextBox2.SaveFile(saveFileDialog1.FileName);
+			}
+		}
+		
+		/* Сохранить результат частотного анализа. */
+		void СохранитьРезультатЧастотногоАнализаToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			tabControl2.SelectedIndex = 1;
+			saveFileDialog1.FileName = "ЧастотныйАнализ.txt";
+			if(saveFileDialog1.ShowDialog() == DialogResult.OK){
+				richTextBox5.SaveFile(saveFileDialog1.FileName);
+			}
+		}
+		
+		/* Сохранить таблицу пропорционального шифра. */
+		void СохранитьТаблицуПропорциональногоШифраToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			tabControl2.SelectedIndex = 2;
+			saveFileDialog1.FileName = "ПропорциональныйШифр.txt";
+			if(saveFileDialog1.ShowDialog() == DialogResult.OK){
+				richTextBox3.SaveFile(saveFileDialog1.FileName);
+			}
+		}
+		
+		/* Сохранить таблицу многоалфавитных посдатонок. */
+		void СохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			tabControl2.SelectedIndex = 4;
+			saveFileDialog1.FileName = "МногоалфавитнаяТаблица.txt";
+			if(saveFileDialog1.ShowDialog() == DialogResult.OK){
+				richTextBox4.SaveFile(saveFileDialog1.FileName);
+			}			
+		}
+		
+		/* Сохранить файл исходных данных. */
+		void СохранитьФайлИсходныхДанныхToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			saveFileDialog1.FileName = "файл.txt";
+			if(saveFileDialog1.ShowDialog() == DialogResult.OK){
+				richTextBox1.SaveFile(saveFileDialog1.FileName);
+			}
+		}
 	}
 }

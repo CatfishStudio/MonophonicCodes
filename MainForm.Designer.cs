@@ -77,6 +77,9 @@ namespace MonophonicCodes
 			this.richTextBox3 = new System.Windows.Forms.RichTextBox();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+			this.сохранитьФайлИсходныхДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
@@ -111,6 +114,7 @@ namespace MonophonicCodes
 									this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem,
 									this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem,
 									this.toolStripSeparator5,
+									this.сохранитьФайлИсходныхДанныхToolStripMenuItem,
 									this.сохранитьРезультатШифрованияToolStripMenuItem,
 									this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem,
 									this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem,
@@ -149,24 +153,28 @@ namespace MonophonicCodes
 			this.сохранитьРезультатШифрованияToolStripMenuItem.Name = "сохранитьРезультатШифрованияToolStripMenuItem";
 			this.сохранитьРезультатШифрованияToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
 			this.сохранитьРезультатШифрованияToolStripMenuItem.Text = "Сохранить результат шифрования.";
+			this.сохранитьРезультатШифрованияToolStripMenuItem.Click += new System.EventHandler(this.СохранитьРезультатШифрованияToolStripMenuItemClick);
 			// 
 			// сохранитьРезультатЧастотногоАнализаToolStripMenuItem
 			// 
 			this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem.Name = "сохранитьРезультатЧастотногоАнализаToolStripMenuItem";
 			this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
 			this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem.Text = "Сохранить результат частотного анализа.";
+			this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem.Click += new System.EventHandler(this.СохранитьРезультатЧастотногоАнализаToolStripMenuItemClick);
 			// 
 			// сохранитьТаблицуПропорциональногоШифраToolStripMenuItem
 			// 
 			this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem.Name = "сохранитьТаблицуПропорциональногоШифраToolStripMenuItem";
 			this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
 			this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem.Text = "Сохранить таблицу пропорционального шифра.";
+			this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem.Click += new System.EventHandler(this.СохранитьТаблицуПропорциональногоШифраToolStripMenuItemClick);
 			// 
 			// сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem
 			// 
 			this.сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem.Name = "сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem";
 			this.сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
 			this.сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem.Text = "Сохранить таблицу многоалфавитных посдатонок.";
+			this.сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem.Click += new System.EventHandler(this.СохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItemClick);
 			// 
 			// toolStripSeparator6
 			// 
@@ -190,7 +198,7 @@ namespace MonophonicCodes
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.toolStripStatusLabel1,
 									this.toolStripStatusLabel2});
-			this.statusStrip1.Location = new System.Drawing.Point(0, 324);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 354);
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.Size = new System.Drawing.Size(743, 22);
 			this.statusStrip1.TabIndex = 1;
@@ -311,8 +319,8 @@ namespace MonophonicCodes
 			// splitContainer1.Panel2
 			// 
 			this.splitContainer1.Panel2.Controls.Add(this.tabControl2);
-			this.splitContainer1.Size = new System.Drawing.Size(743, 275);
-			this.splitContainer1.SplitterDistance = 120;
+			this.splitContainer1.Size = new System.Drawing.Size(743, 305);
+			this.splitContainer1.SplitterDistance = 133;
 			this.splitContainer1.TabIndex = 3;
 			// 
 			// tabControl1
@@ -322,7 +330,7 @@ namespace MonophonicCodes
 			this.tabControl1.Location = new System.Drawing.Point(0, 0);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(743, 120);
+			this.tabControl1.Size = new System.Drawing.Size(743, 133);
 			this.tabControl1.TabIndex = 0;
 			// 
 			// tabPage1
@@ -331,7 +339,7 @@ namespace MonophonicCodes
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(735, 94);
+			this.tabPage1.Size = new System.Drawing.Size(735, 107);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Входные данные";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -342,7 +350,7 @@ namespace MonophonicCodes
 			this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox1.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(729, 88);
+			this.richTextBox1.Size = new System.Drawing.Size(729, 101);
 			this.richTextBox1.TabIndex = 0;
 			this.richTextBox1.Text = "";
 			// 
@@ -356,7 +364,7 @@ namespace MonophonicCodes
 			this.tabControl2.Location = new System.Drawing.Point(0, 0);
 			this.tabControl2.Name = "tabControl2";
 			this.tabControl2.SelectedIndex = 0;
-			this.tabControl2.Size = new System.Drawing.Size(743, 151);
+			this.tabControl2.Size = new System.Drawing.Size(743, 168);
 			this.tabControl2.TabIndex = 0;
 			// 
 			// tabPage2
@@ -365,7 +373,7 @@ namespace MonophonicCodes
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(735, 125);
+			this.tabPage2.Size = new System.Drawing.Size(735, 142);
 			this.tabPage2.TabIndex = 0;
 			this.tabPage2.Text = "Результат шифрования";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -375,7 +383,7 @@ namespace MonophonicCodes
 			this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox2.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox2.Name = "richTextBox2";
-			this.richTextBox2.Size = new System.Drawing.Size(729, 119);
+			this.richTextBox2.Size = new System.Drawing.Size(729, 136);
 			this.richTextBox2.TabIndex = 0;
 			this.richTextBox2.Text = "";
 			// 
@@ -385,7 +393,7 @@ namespace MonophonicCodes
 			this.tabPage4.Location = new System.Drawing.Point(4, 22);
 			this.tabPage4.Name = "tabPage4";
 			this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage4.Size = new System.Drawing.Size(735, 125);
+			this.tabPage4.Size = new System.Drawing.Size(735, 142);
 			this.tabPage4.TabIndex = 1;
 			this.tabPage4.Text = "Результат частотного анализа";
 			this.tabPage4.UseVisualStyleBackColor = true;
@@ -395,7 +403,7 @@ namespace MonophonicCodes
 			this.richTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox5.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox5.Name = "richTextBox5";
-			this.richTextBox5.Size = new System.Drawing.Size(729, 119);
+			this.richTextBox5.Size = new System.Drawing.Size(729, 136);
 			this.richTextBox5.TabIndex = 0;
 			this.richTextBox5.Text = "";
 			// 
@@ -405,7 +413,7 @@ namespace MonophonicCodes
 			this.tabPage5.Location = new System.Drawing.Point(4, 22);
 			this.tabPage5.Name = "tabPage5";
 			this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage5.Size = new System.Drawing.Size(735, 125);
+			this.tabPage5.Size = new System.Drawing.Size(735, 142);
 			this.tabPage5.TabIndex = 2;
 			this.tabPage5.Text = "Таблица пропорционального шифра";
 			this.tabPage5.UseVisualStyleBackColor = true;
@@ -416,7 +424,7 @@ namespace MonophonicCodes
 			this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox3.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox3.Name = "richTextBox3";
-			this.richTextBox3.Size = new System.Drawing.Size(729, 119);
+			this.richTextBox3.Size = new System.Drawing.Size(729, 136);
 			this.richTextBox3.TabIndex = 0;
 			this.richTextBox3.Text = "";
 			this.richTextBox3.WordWrap = false;
@@ -427,7 +435,7 @@ namespace MonophonicCodes
 			this.tabPage3.Location = new System.Drawing.Point(4, 22);
 			this.tabPage3.Name = "tabPage3";
 			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(735, 125);
+			this.tabPage3.Size = new System.Drawing.Size(735, 142);
 			this.tabPage3.TabIndex = 3;
 			this.tabPage3.Text = "Таблица многоалфавитных подстановок";
 			this.tabPage3.UseVisualStyleBackColor = true;
@@ -438,15 +446,31 @@ namespace MonophonicCodes
 			this.richTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox4.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox4.Name = "richTextBox4";
-			this.richTextBox4.Size = new System.Drawing.Size(729, 119);
+			this.richTextBox4.Size = new System.Drawing.Size(729, 136);
 			this.richTextBox4.TabIndex = 1;
 			this.richTextBox4.Text = resources.GetString("richTextBox4.Text");
+			// 
+			// openFileDialog1
+			// 
+			this.openFileDialog1.FileName = "openFileDialog1";
+			this.openFileDialog1.Filter = "*.txt|*.txt";
+			// 
+			// saveFileDialog1
+			// 
+			this.saveFileDialog1.Filter = "*.txt|*.txt";
+			// 
+			// сохранитьФайлИсходныхДанныхToolStripMenuItem
+			// 
+			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Name = "сохранитьФайлИсходныхДанныхToolStripMenuItem";
+			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
+			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Text = "Сохранить файл исходных данных.";
+			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Click += new System.EventHandler(this.СохранитьФайлИсходныхДанныхToolStripMenuItemClick);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(743, 346);
+			this.ClientSize = new System.Drawing.Size(743, 376);
 			this.Controls.Add(this.splitContainer1);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.statusStrip1);
@@ -474,6 +498,9 @@ namespace MonophonicCodes
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripMenuItem сохранитьФайлИсходныхДанныхToolStripMenuItem;
+		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripMenuItem сохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItem;
