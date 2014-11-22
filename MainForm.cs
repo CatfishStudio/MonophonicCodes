@@ -174,6 +174,39 @@ namespace MonophonicCodes
 			
 		}
 		
+		/* загрузка ранее сохраненного пропорционального шифра */
+		void loadProportionalCode()
+		{
+			if(richTextBox3.Text != ""){
+				alphabet = new List<Letter>(); // Таблиа пропорционального шифра
+				for(int i = 0; i < richTextBox3.Lines.Length; i++){
+					string lineText = richTextBox3.Lines[i].ToString();
+					string name = "";
+					int count = 0;
+					for(int j = 0; j < lineText.Length; j++){
+						if(lineText[j].ToString() == ":") name = lineText[j-1].ToString();
+						if(lineText[j].ToString() == "]") count++;
+					}
+					alphabet.Add(new Letter(name, count));
+					int index = 0;
+					bool open = false;
+					for(int k = 0; k < lineText.Length; k++){
+						if(open == true){
+							if(lineText[k].ToString() != "]") alphabet[i].variantsReplacement[index] += lineText[k].ToString();
+							else{
+								open = false;
+								index++;
+							}
+						}
+						if(lineText[k].ToString() == "[") open = true;
+					}
+					          
+				}
+				
+				
+			}else MessageBox.Show("У вас нет пропорционального шифра!");
+		}
+		
 		/* декодировать пропорциональный шифр ----------*/
 		void performDecodeProportionalCode()
 		{
@@ -185,9 +218,9 @@ namespace MonophonicCodes
 			for(int iRTB = 0; iRTB < richTextBox1.Text.Length; iRTB++){ // символы в тексте
 				if(index == 3 || iRTB == richTextBox1.Text.Length - 1){
 					if(iRTB == richTextBox1.Text.Length -1) code += richTextBox1.Text[iRTB].ToString();
-					MessageBox.Show(code);
 					for(int i = 0; i < alphabet.Count; i++){
 						for(int j = 0; j < alphabet[i].variantsReplacement.Length; j++){
+							
 							if(alphabet[i].variantsReplacement[j].ToString() == code.ToString()){
 								richTextBox2.Text += alphabet[i].name;
 								index = 0;
@@ -355,6 +388,7 @@ namespace MonophonicCodes
 		void ToolStripButton2Click(object sender, EventArgs e)
 		{
 			if(toolStripComboBox1.Text == "Пропорциональное шифрование"){
+				loadProportionalCode();
 				performDecodeProportionalCode();
 				toolStripStatusLabel2.Text = "Действие: Пропорциональная расшифровка завершена!";
 			}
