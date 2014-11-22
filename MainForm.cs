@@ -33,8 +33,8 @@ namespace MonophonicCodes
 			//
 		}
 		
-		/* Структура буквы */
-		public struct Letter
+		/* Класс буквы (пропорциональное шиврование)*/
+		public class Letter
 		{
 			public string name;
 			public int count;
@@ -60,10 +60,41 @@ namespace MonophonicCodes
 			}
 		}
 		
-		public List<Letter> alphabet = new List<Letter>(); // Таблиа пропорционального шифра
-		public string[] textKey;
+		/* Класс буквы и пренадлежащего ей ключа*/
+		public class LetterAndKey
+		{
+			public string nameLetter;
+			public string nameKey;
+			public string codingLatter;
+			
+			public LetterAndKey(string _nameLetter, string _nameKey)
+			{
+				nameLetter = _nameLetter;
+				nameKey = _nameKey;
+				codingLatter = "";
+			}
+			
+			public void SetValue(string _codingLetter)
+			{
+				codingLatter = _codingLetter;
+			}
+			
+			public string GetValue()
+			{
+				return codingLatter;
+			}
+		}
 		
-		/* Частотный анализ */
+		public List<Letter> alphabet = new List<Letter>(); // Таблиа пропорционального шифра
+						
+		public List<LetterAndKey> alphabetKey = new List<LetterAndKey>(); // Таблиа букв и соответствующего ключа
+		
+		
+		/*===========================================================================
+		  * ПРОПОРЦИОНАЛЬНЫЙ ШИФР
+		  * =========================================================================*/
+			
+		/* Частотный анализ ----------------------------*/
 		void frequencyAnalysis()
 		{
 			toolStripStatusLabel2.Text = "Действие: Частотный анализ...";
@@ -93,7 +124,7 @@ namespace MonophonicCodes
             }
 		}
 		
-		/* инициализация пропорционального шифра */
+		/* инициализация пропорционального шифра -------*/
 		void initProportionalCode()
 		{
 			toolStripStatusLabel2.Text = "Действие: Инициализация пропорционального шифра...";
@@ -113,7 +144,7 @@ namespace MonophonicCodes
 			}
 		}
 		
-		/* кодировать пропорциональный шифр */
+		/* кодировать пропорциональный шифр ------------*/
 		void performEncodeProportionalCode()
 		{
 			toolStripStatusLabel2.Text = "Действие: Кодирование пропорционального шифра...";
@@ -136,7 +167,7 @@ namespace MonophonicCodes
 			
 		}
 		
-		/* декодировать пропорциональный шифр */
+		/* декодировать пропорциональный шифр ----------*/
 		void performDecodeProportionalCode()
 		{
 			toolStripStatusLabel2.Text = "Действие: Декодирование пропорционального шифра...";
@@ -166,27 +197,79 @@ namespace MonophonicCodes
 			}
 		}
 		
+		/*===========================================================================
+		  * МНОГОАЛФАВИТНЫЕ ПОДСТАНОВКИ
+		  * =========================================================================*/
 		
 		/* инициализация алфавита ключа */
 		void initAlphabetKey()
 		{
+			toolStripStatusLabel2.Text = "Действие: Инициализация алфавита ключа...";
+			
 			int index = 0;
-			textKey = new string[richTextBox1.Text.Length];
-			for(int i = 0; i < textKey.Length; i++){
+			alphabetKey = new List<LetterAndKey>();
+			
+			for(int i = 0; i < richTextBox1.Text.Length; i++){
 				if(index == toolStripTextBox1.Text.Length){
-					//textKey[i] = toolStripTextBox1.Text[index].ToString();
 					index = 0;
-				}
-				else {
-					textKey[i] = toolStripTextBox1.Text[index].ToString();
-					richTextBox2.Text += toolStripTextBox1.Text[index].ToString();
+					alphabetKey.Add(new LetterAndKey(richTextBox1.Text[i].ToString(), toolStripTextBox1.Text[index].ToString()));
 					index++;
 				}
-				//richTextBox2.Text += textKey[i].ToString();
+				else {
+					alphabetKey.Add(new LetterAndKey(richTextBox1.Text[i].ToString(), toolStripTextBox1.Text[index].ToString()));
+					index++;
+				}
+				//richTextBox2.Text += alphabetKey[i].nameKey;
 			}
 			
 		}
 		
+		/* кодировать Многоалфавитные подстановки */
+		void performEncodeMultiAlphabetSubstitution()
+		{
+			richTextBox2.Clear();
+				
+			for(int i = 0; i < alphabetKey.Count; i++){
+				for(int j = 0; j < richTextBox4.Lines.Length; j++){
+					
+					string textLine = richTextBox4.Lines[j].ToString(); // строка многоалфавитного текста
+					
+					
+					if(alphabetKey[i].nameKey.ToString() == textLine[0].ToString()){ // буква ключа = первой букве в строке многоалфавитного текста
+						
+						// РУССКИЙ ТЕКСТ В ВЕРХНЕМ РЕГИСТРЕ
+						for(int k = 0; k < richTextBox4.Lines[0].Length; k++){
+							string alphabetLine = richTextBox4.Lines[0].ToString(); // первая строка многоалфавитного текста (верхний регистр)
+							if(alphabetKey[i].nameLetter.ToString() == alphabetLine[k].ToString()){ // буква = букве в первой строке многоалфавитного текста
+								alphabetKey[i].SetValue(textLine[k].ToString());
+								richTextBox2.Text += alphabetKey[i].GetValue();
+								break;
+							}
+						}
+						
+						// РУССКИЙ ТЕКСТ В НИЖНЕМ РЕГИСТРЕ
+						for(int k = 0; k < richTextBox4.Lines[0].Length; k++){
+							string alphabetLine = richTextBox4.Lines[31].ToString(); // тридцатьпервая строка многоалфавитного текста (нижний регистр)
+							if(alphabetKey[i].nameLetter.ToString() == alphabetLine[k].ToString()){ // буква = букве в первой строке многоалфавитного текста
+								alphabetKey[i].SetValue(textLine[k].ToString());
+								richTextBox2.Text += alphabetKey[i].GetValue();
+								break;
+							}
+						}
+						
+						break;
+					}
+					
+					
+					
+				}
+			}
+			
+			
+		}
+		
+		
+		/*=ВЫПОЛНЕНИЕ ================================================================*/
 		void ToolStripButton1Click(object sender, EventArgs e)
 		{
 			if(toolStripComboBox1.Text == "Пропорциональное шифрование"){
@@ -196,7 +279,11 @@ namespace MonophonicCodes
 				toolStripStatusLabel2.Text = "Действие: Пропорциональное шифрование завершено!";
 			}
 			if(toolStripComboBox1.Text == "Многоалфавитные подстановки"){
-				initAlphabetKey();
+				if(toolStripTextBox1.Text != ""){
+					initAlphabetKey();
+					performEncodeMultiAlphabetSubstitution();
+					toolStripStatusLabel2.Text = "Действие: Многоалфавитная подстановка завершена!";
+				}else MessageBox.Show("Вы не ввели ключ!");
 			}
 			
 		}

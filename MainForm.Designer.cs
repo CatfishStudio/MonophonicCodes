@@ -239,6 +239,7 @@ namespace MonophonicCodes
 			this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.toolStripTextBox1.Name = "toolStripTextBox1";
 			this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
+			this.toolStripTextBox1.Text = "КЛЮЧ";
 			// 
 			// toolStripSeparator1
 			// 
