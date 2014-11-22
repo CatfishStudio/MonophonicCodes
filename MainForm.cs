@@ -155,19 +155,21 @@ namespace MonophonicCodes
 			toolStripStatusLabel2.Text = "Действие: Кодирование пропорционального шифра...";
 			richTextBox2.Clear();
 			
-			int index = 0;
 			for(int iRTB = 0; iRTB < richTextBox1.Text.Length; iRTB++){ // символы в тексте
 				for(int i = 0; i < alphabet.Count; i++){ // алфавит повторений
 					if(richTextBox1.Text[iRTB].ToString() == alphabet[i].name){ // найдена буква
-						richTextBox2.Text += alphabet[i].variantsReplacement[alphabet[i].index].ToString();
-						if(alphabet[i].index == alphabet[i].count) alphabet[i].changeIndex(0);
-						else{
-							index++;
-							alphabet[i].changeIndex(index);
+						
+						if(alphabet[i].index == alphabet[i].count){
+							alphabet[i].index = 0;
+							richTextBox2.Text += alphabet[i].variantsReplacement[alphabet[i].index].ToString();
+						}else{
+							richTextBox2.Text += alphabet[i].variantsReplacement[alphabet[i].index].ToString();
+							alphabet[i].index++;
 						}
 						break;
 					}
 				}
+				
 			}
 			
 		}
@@ -252,7 +254,7 @@ namespace MonophonicCodes
 									break;
 								}
 							}else{ // РУССКИЙ ТЕКСТ В НИЖНЕМ РЕГИСТРЕ
-								string alphabetLine = richTextBox4.Lines[31].ToString(); // тридцатьпервая строка многоалфавитного текста (нижний регистр)
+								string alphabetLine = richTextBox4.Lines[32].ToString(); // тридцатьпервая строка многоалфавитного текста (нижний регистр)
 								if(alphabetKey[i].nameLetter.ToString() == alphabetLine[k].ToString()){ // буква = букве в первой строке многоалфавитного текста
 									alphabetKey[i].SetValue(textLine[k].ToString());
 									richTextBox2.Text += alphabetKey[i].GetValue();
@@ -314,7 +316,7 @@ namespace MonophonicCodes
 									break;
 								}
 							}else{// РУССКИЙ ТЕКСТ В НИЖНЕМ РЕГИСТРЕ
-								string alphabetLine = richTextBox4.Lines[31].ToString(); 
+								string alphabetLine = richTextBox4.Lines[32].ToString(); 
 								if(alphabetKey[i].codingLatter.ToString() == textLine[k].ToString()){ 
 									alphabetKey[i].SetLetter(alphabetLine[k].ToString());
 									richTextBox2.Text += alphabetKey[i].nameLetter;
@@ -327,6 +329,7 @@ namespace MonophonicCodes
 					}
 				}
 			}
+			richTextBox2.Text = richTextBox2.Text.ToLower();
 		}
 		
 		
@@ -397,7 +400,7 @@ namespace MonophonicCodes
 		/* Сохранить таблицу многоалфавитных посдатонок. */
 		void СохранитьТаблицуМногоалфавитныхПосдатонокToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			tabControl2.SelectedIndex = 4;
+			tabControl2.SelectedIndex = 3;
 			saveFileDialog1.FileName = "МногоалфавитнаяТаблица.txt";
 			if(saveFileDialog1.ShowDialog() == DialogResult.OK){
 				richTextBox4.SaveFile(saveFileDialog1.FileName);
@@ -410,6 +413,33 @@ namespace MonophonicCodes
 			saveFileDialog1.FileName = "файл.txt";
 			if(saveFileDialog1.ShowDialog() == DialogResult.OK){
 				richTextBox1.SaveFile(saveFileDialog1.FileName);
+			}
+		}
+		
+		/* Открыть файл входных данных */
+		void ОткрытьТектовыйФайлToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			richTextBox1.Clear();
+			if(openFileDialog1.ShowDialog() == DialogResult.OK){
+				richTextBox1.LoadFile(openFileDialog1.FileName);
+			}
+		}
+		
+		/* Открыть таблицу пропорционального шифра */
+		void ОткрытьТаблицуПропорциональногоШифрованияToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			richTextBox3.Clear();
+			if(openFileDialog1.ShowDialog() == DialogResult.OK){
+				richTextBox3.LoadFile(openFileDialog1.FileName);
+			}
+		}
+		
+		/* Открыть таблицу многоалфавитных подстановок */
+		void ОткрытьТаблицуМногоалфавитныхПодстановокToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			richTextBox4.Clear();
+			if(openFileDialog1.ShowDialog() == DialogResult.OK){
+				richTextBox4.LoadFile(openFileDialog1.FileName);
 			}
 		}
 	}

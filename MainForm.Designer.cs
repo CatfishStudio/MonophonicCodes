@@ -43,6 +43,7 @@ namespace MonophonicCodes
 			this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.сохранитьФайлИсходныхДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.сохранитьРезультатШифрованияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.сохранитьРезультатЧастотногоАнализаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.сохранитьТаблицуПропорциональногоШифраToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,7 +80,6 @@ namespace MonophonicCodes
 			this.richTextBox4 = new System.Windows.Forms.RichTextBox();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-			this.сохранитьФайлИсходныхДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
@@ -130,23 +130,33 @@ namespace MonophonicCodes
 			this.открытьТектовыйФайлToolStripMenuItem.Name = "открытьТектовыйФайлToolStripMenuItem";
 			this.открытьТектовыйФайлToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
 			this.открытьТектовыйФайлToolStripMenuItem.Text = "Открыть тектовый файл.";
+			this.открытьТектовыйФайлToolStripMenuItem.Click += new System.EventHandler(this.ОткрытьТектовыйФайлToolStripMenuItemClick);
 			// 
 			// открытьТаблицуПропорциональногоШифрованияToolStripMenuItem
 			// 
 			this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem.Name = "открытьТаблицуПропорциональногоШифрованияToolStripMenuItem";
 			this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
 			this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem.Text = "Открыть таблицу пропорционального шифра.";
+			this.открытьТаблицуПропорциональногоШифрованияToolStripMenuItem.Click += new System.EventHandler(this.ОткрытьТаблицуПропорциональногоШифрованияToolStripMenuItemClick);
 			// 
 			// открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem
 			// 
 			this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem.Name = "открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem";
 			this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
 			this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem.Text = "Открыть таблицу многоалфавитных подстановок.";
+			this.открытьТаблицуМногоалфавитныхПодстановокToolStripMenuItem.Click += new System.EventHandler(this.ОткрытьТаблицуМногоалфавитныхПодстановокToolStripMenuItemClick);
 			// 
 			// toolStripSeparator5
 			// 
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
 			this.toolStripSeparator5.Size = new System.Drawing.Size(352, 6);
+			// 
+			// сохранитьФайлИсходныхДанныхToolStripMenuItem
+			// 
+			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Name = "сохранитьФайлИсходныхДанныхToolStripMenuItem";
+			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
+			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Text = "Сохранить файл исходных данных.";
+			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Click += new System.EventHandler(this.СохранитьФайлИсходныхДанныхToolStripMenuItemClick);
 			// 
 			// сохранитьРезультатШифрованияToolStripMenuItem
 			// 
@@ -458,13 +468,6 @@ namespace MonophonicCodes
 			// saveFileDialog1
 			// 
 			this.saveFileDialog1.Filter = "*.txt|*.txt";
-			// 
-			// сохранитьФайлИсходныхДанныхToolStripMenuItem
-			// 
-			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Name = "сохранитьФайлИсходныхДанныхToolStripMenuItem";
-			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(355, 22);
-			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Text = "Сохранить файл исходных данных.";
-			this.сохранитьФайлИсходныхДанныхToolStripMenuItem.Click += new System.EventHandler(this.СохранитьФайлИсходныхДанныхToolStripMenuItemClick);
 			// 
 			// MainForm
 			// 
