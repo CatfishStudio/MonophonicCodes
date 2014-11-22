@@ -74,6 +74,11 @@ namespace MonophonicCodes
 				codingLatter = "";
 			}
 			
+			public void SetLetter(string _nameLetter)
+			{
+				nameLetter = _nameLetter;
+			}
+			
 			public void SetValue(string _codingLetter)
 			{
 				codingLatter = _codingLetter;
@@ -201,8 +206,8 @@ namespace MonophonicCodes
 		  * МНОГОАЛФАВИТНЫЕ ПОДСТАНОВКИ
 		  * =========================================================================*/
 		
-		/* инициализация алфавита ключа */
-		void initAlphabetKey()
+		/* инициализация алфавита ключа ---------------*/
+		void initEncodeAlphabetKey()
 		{
 			toolStripStatusLabel2.Text = "Действие: Инициализация алфавита ключа...";
 			
@@ -219,14 +224,14 @@ namespace MonophonicCodes
 					alphabetKey.Add(new LetterAndKey(richTextBox1.Text[i].ToString(), toolStripTextBox1.Text[index].ToString()));
 					index++;
 				}
-				//richTextBox2.Text += alphabetKey[i].nameKey;
 			}
 			
 		}
 		
-		/* кодировать Многоалфавитные подстановки */
+		/* кодировать Многоалфавитные подстановки -----*/
 		void performEncodeMultiAlphabetSubstitution()
 		{
+			toolStripStatusLabel2.Text = "Действие: Кодирование многоалфавитными подстановками...";
 			richTextBox2.Clear();
 				
 			for(int i = 0; i < alphabetKey.Count; i++){
@@ -268,6 +273,66 @@ namespace MonophonicCodes
 			
 		}
 		
+		/* инициализация алфавита ключа ---------------*/
+		void initDecodeAlphabetKey()
+		{
+			toolStripStatusLabel2.Text = "Действие: Инициализация алфавита ключа...";
+			
+			int index = 0;
+			alphabetKey = new List<LetterAndKey>();
+			
+			for(int i = 0; i < richTextBox1.Text.Length; i++){
+				if(index == toolStripTextBox1.Text.Length){
+					index = 0;
+					alphabetKey.Add(new LetterAndKey("", toolStripTextBox1.Text[index].ToString()));
+					alphabetKey[i].SetValue(richTextBox1.Text[i].ToString());
+					index++;
+				}
+				else {
+					alphabetKey.Add(new LetterAndKey("", toolStripTextBox1.Text[index].ToString()));
+					alphabetKey[i].SetValue(richTextBox1.Text[i].ToString());
+					index++;
+				}
+			}
+		}
+		
+		/* декодировка многоалфавитных подстановок ----*/
+		void performDecodeMultiAlphabetSubstitution()
+		{
+			richTextBox2.Clear();
+			
+			for(int i = 0; i < alphabetKey.Count; i++){
+				for(int j = 0; j < richTextBox4.Lines.Length; j++){
+					
+					string textLine = richTextBox4.Lines[j].ToString(); // строка многоалфавитного текста
+					
+					if(alphabetKey[i].nameKey.ToString() == textLine[0].ToString()){ // буква ключа = первой букве в строке многоалфавитного текста
+						
+						// РУССКИЙ ТЕКСТ В ВЕРХНЕМ РЕГИСТРЕ
+						for(int k = 0; k < textLine.Length; k++){
+							string alphabetLine = richTextBox4.Lines[0].ToString(); // первая строка многоалфавитного текста (верхний регистр)
+							if(alphabetKey[i].codingLatter.ToString() == textLine[k].ToString()){ // буква = букве в первой строке многоалфавитного текста
+								alphabetKey[i].SetLetter(alphabetLine[k].ToString());
+								richTextBox2.Text += alphabetKey[i].nameLetter;
+								break;
+							}
+						}
+						
+						// РУССКИЙ ТЕКСТ В НИЖНЕМ РЕГИСТРЕ
+						for(int k = 0; k < textLine.Length; k++){
+							string alphabetLine = richTextBox4.Lines[31].ToString(); // первая строка многоалфавитного текста (верхний регистр)
+							if(alphabetKey[i].codingLatter.ToString() == textLine[k].ToString()){ // буква = букве в первой строке многоалфавитного текста
+								alphabetKey[i].SetLetter(alphabetLine[k].ToString());
+								richTextBox2.Text += alphabetKey[i].nameLetter;
+								break;
+							}
+						}
+						break;
+					}
+				}
+			}
+		}
+		
 		
 		/*=ВЫПОЛНЕНИЕ ================================================================*/
 		void ToolStripButton1Click(object sender, EventArgs e)
@@ -280,7 +345,7 @@ namespace MonophonicCodes
 			}
 			if(toolStripComboBox1.Text == "Многоалфавитные подстановки"){
 				if(toolStripTextBox1.Text != ""){
-					initAlphabetKey();
+					initEncodeAlphabetKey();
 					performEncodeMultiAlphabetSubstitution();
 					toolStripStatusLabel2.Text = "Действие: Многоалфавитная подстановка завершена!";
 				}else MessageBox.Show("Вы не ввели ключ!");
@@ -292,7 +357,13 @@ namespace MonophonicCodes
 		{
 			if(toolStripComboBox1.Text == "Пропорциональное шифрование"){
 				performDecodeProportionalCode();
-				toolStripStatusLabel2.Text = "Действие: Пропорциональная шифровка завершена!";
+				toolStripStatusLabel2.Text = "Действие: Пропорциональная расшифровка завершена!";
+			}
+			
+			if(toolStripComboBox1.Text == "Многоалфавитные подстановки"){
+				initDecodeAlphabetKey();
+				performDecodeMultiAlphabetSubstitution();
+				toolStripStatusLabel2.Text = "Действие: Многоалфавитная расшифровка завершена!";
 			}
 		}
 	}
