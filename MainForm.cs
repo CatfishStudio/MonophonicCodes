@@ -94,6 +94,7 @@ namespace MonophonicCodes
 						
 		public List<LetterAndKey> alphabetKey = new List<LetterAndKey>(); // Таблиа букв и соответствующего ключа
 		
+		private RichTextBox _selectRTB;
 		
 		/*===========================================================================
 		  * ПРОПОРЦИОНАЛЬНЫЙ ШИФР
@@ -475,6 +476,198 @@ namespace MonophonicCodes
 			if(openFileDialog1.ShowDialog() == DialogResult.OK){
 				richTextBox4.LoadFile(openFileDialog1.FileName);
 			}
+		}
+		
+		void RichTextBox1TextChanged(object sender, EventArgs e)
+		{
+			_selectRTB = richTextBox1;
+		}
+		
+		void RichTextBox1Click(object sender, EventArgs e)
+		{
+			_selectRTB = richTextBox1;
+		}
+		
+		void RichTextBox2TextChanged(object sender, EventArgs e)
+		{
+			_selectRTB = richTextBox2;
+		}
+		
+		void RichTextBox2Click(object sender, EventArgs e)
+		{
+			_selectRTB = richTextBox2;
+		}
+		
+		void RichTextBox5TextChanged(object sender, EventArgs e)
+		{
+			_selectRTB = richTextBox5;
+		}
+		
+		void RichTextBox5Click(object sender, EventArgs e)
+		{
+			_selectRTB = richTextBox1;
+		}
+		
+		void RichTextBox3TextChanged(object sender, EventArgs e)
+		{
+			_selectRTB = richTextBox3;
+		}
+		
+		void RichTextBox3Click(object sender, EventArgs e)
+		{
+			_selectRTB = richTextBox3;
+		}
+		
+		void RichTextBox4TextChanged(object sender, EventArgs e)
+		{
+			_selectRTB = richTextBox4;
+		}
+		
+		void RichTextBox4Click(object sender, EventArgs e)
+		{
+			_selectRTB = richTextBox1;
+		}
+		
+		/* Правка: Отмена, Повтор, Вырезать, Копировать, Вставить, Удалить */
+		void editUndo() // отмена
+		{
+			_selectRTB.Undo();
+		}
+		
+		void editRedo() // повтор
+		{
+			_selectRTB.Redo();
+		}
+		
+		void editCut() // вырезать
+		{
+			_selectRTB.Cut();
+		}
+		
+		void editCopy() // копировать
+		{
+			_selectRTB.Copy();
+		}
+		
+		void editPaste() // вставить
+		{
+			_selectRTB.Paste();
+		}
+		
+		void editDelete() // удалить
+		{
+			Clipboard.SetDataObject("");
+			_selectRTB.Paste();
+		}
+		
+		void editSelectAll() // Выделить всё
+		{
+			_selectRTB.SelectAll();
+		}
+		
+		void ОтменитьToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			editUndo();
+		}
+		
+		void ПовторитьToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			editRedo();
+		}
+		
+		void ВырезатьToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			editCut();
+		}
+		
+		void КопироватьToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			editCopy();
+		}
+		
+		void ВставитьToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			editPaste();
+		}
+		
+		void УдалитьToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			editDelete();
+		}
+		
+		void ВыделитьВсёToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			editSelectAll();
+		}
+		
+		void ToolStripMenuItem2Click(object sender, EventArgs e)
+		{
+			editUndo();
+		}
+		
+		void ToolStripMenuItem3Click(object sender, EventArgs e)
+		{
+			editRedo();
+		}
+		
+		void ToolStripMenuItem4Click(object sender, EventArgs e)
+		{
+			editCut();
+		}
+		
+		void ToolStripMenuItem5Click(object sender, EventArgs e)
+		{
+			editCopy();
+		}
+		
+		void ToolStripMenuItem6Click(object sender, EventArgs e)
+		{
+			editPaste();
+		}
+		
+		void ToolStripMenuItem7Click(object sender, EventArgs e)
+		{
+			editDelete();
+		}
+		
+		void ВыделитьВсёToolStripMenuItem1Click(object sender, EventArgs e)
+		{
+			editSelectAll();
+		}
+		
+		void PaintToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("mspaint.exe");
+		}
+		
+		void WordpadToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("wordpad.exe");
+		}
+		
+		void БлокнотToolStripMenuItem1Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("notepad.exe"); // блокнот
+		}
+		
+		void ПроводникToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("explorer.exe");
+		}
+		
+		void КалькуляторToolStripMenuItem1Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("calc.exe"); // калькулятор
+		}
+		
+		void КоманднаяСтрокаToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("cmd.exe");
+		}
+		
+		void ToolStripMenuItem8Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Программа: MonophonicCodes" + System.Environment.NewLine + "Версия: 1.0" + System.Environment.NewLine + "Автор: Сомов Евгений Павлович" + System.Environment.NewLine + "©  Somov Evgeniy, 2014", "О программе", MessageBoxButtons.OK);
 		}
 	}
 }
