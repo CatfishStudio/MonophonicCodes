@@ -279,16 +279,35 @@ namespace MonophonicCodes
 					if(alphabetKey[i].nameKey.ToString() == textLine[0].ToString()){ // буква ключа = первой букве в строке многоалфавитного текста
 						
 						for(int k = 0; k < richTextBox4.Lines[0].Length; k++){
-							// РУССКИЙ ТЕКСТ В ВЕРХНЕМ РЕГИСТРЕ
+							// В ВЕРХНЕМ РЕГИСТРЕ
 							if(char.IsUpper(alphabetKey[i].nameLetter[0])){
+								// РУССКИЙ ТЕКСТ
 								string alphabetLine = richTextBox4.Lines[0].ToString(); // первая строка многоалфавитного текста (верхний регистр)
 								if(alphabetKey[i].nameLetter.ToString() == alphabetLine[k].ToString()){ // буква = букве в первой строке многоалфавитного текста
 									alphabetKey[i].SetValue(textLine[k].ToString());
 									richTextBox2.Text += alphabetKey[i].GetValue();
 									break;
 								}
-							}else{ // РУССКИЙ ТЕКСТ В НИЖНЕМ РЕГИСТРЕ
+								
+								// АНГЛИЙСКИЙ ТЕКСТ
+								alphabetLine = richTextBox4.Lines[64].ToString(); 
+								if(alphabetKey[i].nameLetter.ToString() == alphabetLine[k].ToString()){ // буква = букве в первой строке многоалфавитного текста
+									alphabetKey[i].SetValue(textLine[k].ToString());
+									richTextBox2.Text += alphabetKey[i].GetValue();
+									break;
+								}
+								
+							}else{ // В НИЖНЕМ РЕГИСТРЕ
+								// РУССКИЙ ТЕКСТ
 								string alphabetLine = richTextBox4.Lines[32].ToString(); // тридцатьпервая строка многоалфавитного текста (нижний регистр)
+								if(alphabetKey[i].nameLetter.ToString() == alphabetLine[k].ToString()){ // буква = букве в первой строке многоалфавитного текста
+									alphabetKey[i].SetValue(textLine[k].ToString());
+									richTextBox2.Text += alphabetKey[i].GetValue();
+									break;
+								}
+								
+								// АНГЛИЙСКИЙ ТЕКСТ
+								alphabetLine = richTextBox4.Lines[91].ToString(); 
 								if(alphabetKey[i].nameLetter.ToString() == alphabetLine[k].ToString()){ // буква = букве в первой строке многоалфавитного текста
 									alphabetKey[i].SetValue(textLine[k].ToString());
 									richTextBox2.Text += alphabetKey[i].GetValue();
@@ -328,6 +347,20 @@ namespace MonophonicCodes
 			}
 		}
 		
+		/* Определение языка текста */
+		string determineLanguage(string _text)
+		{
+			 string text = _text.ToUpper();
+            for (int i = 0; i < text.Length; i++)
+            {
+                char c = text[i];
+                if ((c >= 'А') && (c <= 'Я'))
+                    return "RUS";
+                else  if ((c >= 'A') && (c <= 'Z')) return "ENG";
+            }
+            return "";
+		}
+		
 		/* декодировка многоалфавитных подстановок ----*/
 		void performDecodeMultiAlphabetSubstitution()
 		{
@@ -341,21 +374,52 @@ namespace MonophonicCodes
 					if(alphabetKey[i].nameKey.ToString() == textLine[0].ToString()){ // буква ключа = первой букве в строке многоалфавитного текста
 						
 						for(int k = 0; k < textLine.Length; k++){
-							// РУССКИЙ ТЕКСТ В ВЕРХНЕМ РЕГИСТРЕ
+							// В ВЕРХНЕМ РЕГИСТРЕ
 							if(char.IsUpper(alphabetKey[i].codingLatter[0])){
-								string alphabetLine = richTextBox4.Lines[0].ToString();
+								
+								 
+								string alphabetLineRus = richTextBox4.Lines[0].ToString();
+								string alphabetLineEng = richTextBox4.Lines[64].ToString();
+								
 								if(alphabetKey[i].codingLatter.ToString() == textLine[k].ToString()){ 
-									alphabetKey[i].SetLetter(alphabetLine[k].ToString());
-									richTextBox2.Text += alphabetKey[i].nameLetter;
-									break;
+									
+									// РУССКИЙ ТЕКСТ
+									if(determineLanguage(textLine[k].ToString()) == "RUS"){
+										alphabetKey[i].SetLetter(alphabetLineRus[k].ToString());
+										richTextBox2.Text += alphabetKey[i].nameLetter;
+										break;
+									}
+									// АНГЛИЙСКИЙ ТЕКСТ
+									if(determineLanguage(textLine[k].ToString()) == "ENG"){
+										alphabetKey[i].SetLetter(alphabetLineEng[k].ToString());
+										richTextBox2.Text += alphabetKey[i].nameLetter;
+										break;
+									}
 								}
-							}else{// РУССКИЙ ТЕКСТ В НИЖНЕМ РЕГИСТРЕ
-								string alphabetLine = richTextBox4.Lines[32].ToString(); 
+								
+							}else{// В НИЖНЕМ РЕГИСТРЕ
+								
+								 
+								string alphabetLineRus = richTextBox4.Lines[32].ToString(); 
+								string alphabetLineEng = richTextBox4.Lines[91].ToString();
+								
 								if(alphabetKey[i].codingLatter.ToString() == textLine[k].ToString()){ 
-									alphabetKey[i].SetLetter(alphabetLine[k].ToString());
-									richTextBox2.Text += alphabetKey[i].nameLetter;
-									break;
+									
+									// РУССКИЙ ТЕКСТ
+									if(determineLanguage(textLine[k].ToString()) == "RUS"){
+										alphabetKey[i].SetLetter(alphabetLineRus[k].ToString());
+										richTextBox2.Text += alphabetKey[i].nameLetter;
+										break;
+									}
+									// АНГЛИЙСКИЙ ТЕКСТ
+									if(determineLanguage(textLine[k].ToString()) == "ENG"){
+										alphabetKey[i].SetLetter(alphabetLineEng[k].ToString());
+										richTextBox2.Text += alphabetKey[i].nameLetter;
+										break;
+									}
 								}
+								
+								
 							}
 						}
 												

@@ -330,17 +330,137 @@
   <data name="toolStripButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEPSURBVDhPpZO/asJQHEZ/W2vBOgg61KlIfYA+RUHfppMt
-        ooIvIA6l3VOn4uC/TsUXKB30WhxiJtNBUxCDQ1q+5ouSDgW9jRcOZDjng8slIoees9pzK13tI1Xp/Qs2
-        mVpvIvx4eHNw9zrHvSZ02bCVZLmLp/clzutDXDSGyO2BDl02bCVR6uDFWuPKsJB/tFBo7oYOXTZs5eS2
-        g6iHrRzftINeqRFGSkGNxzsJHN/lYRsOTE0T5tTSgu6fAXtmY2Z/aEH3d6C4ucKns8DCcbSgGwz4rRxt
-        B9aui9VKD7o8bMMBfH/B8zwt6IYDse0rRHlKtnJa6kZpg4atxK+NAT+4xjvpQJcNW/7MWZ/LiGR/AGR7
-        4SaoJP0uAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEOSURBVDhPpZOxasJQGEb/zVqwDoV20KmIPoBPUbBv49SK
+        1IIvUDoU3dWpOGiqU/EFSge9ikPMZDrUCEVxSOUzXypxKOg1vXAgwzkfXC4R+e9JlLvNy4cOLkqvR8Em
+        WTbGwo/qh4Pn9y9UNKHLhq2c3xt4GX3j6rGP9FMfmQPQocuGrcSLbbxZK1zXLOTqFm4a+6FDlw1bOS20
+        EfawlZO7lt8rNcBAKajhcC++47k8bIOBiWnCnFha0P0zYE9tTO1PLejuBm5/rzB3Zpg5jhZ0/QGvlch2
+        YLVcYrHQgy4P22AA6x+4rqsF3WAgun2FME/JVs6KRpjWb9hKLF/r8YNrvJMOdNmw5c+c8siGJLUBYOvh
+        JaKJtHMAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>601, 17</value>
   </metadata>
+  <data name="richTextBox4.Text" xml:space="preserve">
+    <value> АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
+АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ 
+БВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ А
+ВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБ
+ГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВ
+ДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГ
+ЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГД
+ЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕ
+ЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖ
+ИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗ
+КЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИ
+ЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИК
+МНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛ
+НОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМ
+ОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМН
+ПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНО
+РСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОП
+СТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПР
+ТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРС
+УФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТ
+ФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУ
+ХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФ
+ЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХ
+ЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦ
+ШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧ
+ЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШ
+ЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩ
+ЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪ
+ЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫ
+ЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬ
+ЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭ
+Я АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮ
+ абвгдежзиклмнопрстуфхцчшщъыьэюя
+абвгдежзиклмнопрстуфхцчшщъыьэюя 
+бвгдежзиклмнопрстуфхцчшщъыьэюя а
+вгдежзиклмнопрстуфхцчшщъыьэюя аб
+гдежзиклмнопрстуфхцчшщъыьэюя абв
+дежзиклмнопрстуфхцчшщъыьэюя абвг
+ежзиклмнопрстуфхцчшщъыьэюя абвгд
+жзиклмнопрстуфхцчшщъыьэюя абвгде
+зиклмнопрстуфхцчшщъыьэюя абвгдеж
+иклмнопрстуфхцчшщъыьэюя абвгдежз
+клмнопрстуфхцчшщъыьэюя абвгдежзи
+лмнопрстуфхцчшщъыьэюя абвгдежзик
+мнопрстуфхцчшщъыьэюя абвгдежзикл
+нопрстуфхцчшщъыьэюя абвгдежзиклм
+опрстуфхцчшщъыьэюя абвгдежзиклмн
+прстуфхцчшщъыьэюя абвгдежзиклмно
+рстуфхцчшщъыьэюя абвгдежзиклмноп
+стуфхцчшщъыьэюя абвгдежзиклмнопр
+туфхцчшщъыьэюя абвгдежзиклмнопрс
+уфхцчшщъыьэюя абвгдежзиклмнопрст
+фхцчшщъыьэюя абвгдежзиклмнопрсту
+хцчшщъыьэюя абвгдежзиклмнопрстуф
+цчшщъыьэюя абвгдежзиклмнопрстуфх
+чшщъыьэюя абвгдежзиклмнопрстуфхц
+шщъыьэюя абвгдежзиклмнопрстуфхцч
+щъыьэюя абвгдежзиклмнопрстуфхцчш
+ъыьэюя абвгдежзиклмнопрстуфхцчшщ
+ыьэюя абвгдежзиклмнопрстуфхцчшщъ
+ьэюя абвгдежзиклмнопрстуфхцчшщъы
+эюя абвгдежзиклмнопрстуфхцчшщъыь
+юя абвгдежзиклмнопрстуфхцчшщъыьэ
+я абвгдежзиклмнопрстуфхцчшщъыьэю
+ ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+BCDEFGHIJKLMNOPQRSTUVWXYZ A
+CDEFGHIJKLMNOPQRSTUVWXYZ AB
+DEFGHIJKLMNOPQRSTUVWXYZ ABC
+EFGHIJKLMNOPQRSTUVWXYZ ABCD
+FGHIJKLMNOPQRSTUVWXYZ ABCDE
+GHIJKLMNOPQRSTUVWXYZ ABCDEF
+HIJKLMNOPQRSTUVWXYZ ABCDEFG
+IJKLMNOPQRSTUVWXYZ ABCDEFGH
+JKLMNOPQRSTUVWXYZ ABCDEFGHI
+KLMNOPQRSTUVWXYZ ABCDEFGHIJ
+LMNOPQRSTUVWXYZ ABCDEFGHIJK
+MNOPQRSTUVWXYZ ABCDEFGHIJKL
+NOPQRSTUVWXYZ ABCDEFGHIJKLM
+OPQRSTUVWXYZ ABCDEFGHIJKLMN
+PQRSTUVWXYZ ABCDEFGHIJKLMNO
+QRSTUVWXYZ ABCDEFGHIJKLMNOP
+RSTUVWXYZ ABCDEFGHIJKLMNOPQ
+STUVWXYZ ABCDEFGHIJKLMNOPQR
+TUVWXYZ ABCDEFGHIJKLMNOPQRS
+UVWXYZ ABCDEFGHIJKLMNOPQRST
+VWXYZ ABCDEFGHIJKLMNOPQRSTU
+WXYZ ABCDEFGHIJKLMNOPQRSTUV
+XYZ ABCDEFGHIJKLMNOPQRSTUVW
+YZ ABCDEFGHIJKLMNOPQRSTUVWX
+Z ABCDEFGHIJKLMNOPQRSTUVWXY
+ abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz 
+bcdefghijklmnopqrstuvwxyz a
+cdefghijklmnopqrstuvwxyz ab
+defghijklmnopqrstuvwxyz abc
+efghijklmnopqrstuvwxyz abcd
+fghijklmnopqrstuvwxyz abcde
+ghijklmnopqrstuvwxyz abcdef
+hijklmnopqrstuvwxyz abcdefg
+ijklmnopqrstuvwxyz abcdefgh
+jklmnopqrstuvwxyz abcdefghi
+klmnopqrstuvwxyz abcdefghij
+lmnopqrstuvwxyz abcdefghijk
+mnopqrstuvwxyz abcdefghijkl
+nopqrstuvwxyz abcdefghijklm
+opqrstuvwxyz abcdefghijklmn
+pqrstuvwxyz abcdefghijklmno
+qrstuvwxyz abcdefghijklmnop
+rstuvwxyz abcdefghijklmnopq
+stuvwxyz abcdefghijklmnopqr
+tuvwxyz abcdefghijklmnopqrs
+uvwxyz abcdefghijklmnopqrst
+vwxyz abcdefghijklmnopqrstu
+wxyz abcdefghijklmnopqrstuv
+xyz abcdefghijklmnopqrstuvw
+yz abcdefghijklmnopqrstuvwx
+z abcdefghijklmnopqrstuvwxy</value>
+  </data>
   <data name="toolStripMenuItem2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -414,73 +534,6 @@
         t3xd0B5sNs156KdcF7Eai308/QqVV4/bNHlJ0OQlUpJQf5OD7no89jyxh7zxrTaHHptBaBykxG8mUvnO
         F6mgvy69C7vT/7Aaa46u6A0wwXYRs5V4U+3oX9UjmuDxMd0iAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="richTextBox4.Text" xml:space="preserve">
-    <value> АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ 
-БВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ А
-ВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБ
-ГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВ
-ДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГ
-ЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГД
-ЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕ
-ЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖ
-ИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗ
-КЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИ
-ЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИК
-МНОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛ
-НОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМ
-ОПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМН
-ПРСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНО
-РСТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОП
-СТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПР
-ТУФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРС
-УФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТ
-ФХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУ
-ХЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФ
-ЦЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХ
-ЧШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦ
-ШЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧ
-ЩЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШ
-ЪЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩ
-ЫЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪ
-ЬЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫ
-ЭЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬ
-ЮЯ АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭ
-Я АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮ
- абвгдежзиклмнопрстуфхцчшщъыьэюя
-абвгдежзиклмнопрстуфхцчшщъыьэюя 
-бвгдежзиклмнопрстуфхцчшщъыьэюя а
-вгдежзиклмнопрстуфхцчшщъыьэюя аб
-гдежзиклмнопрстуфхцчшщъыьэюя абв
-дежзиклмнопрстуфхцчшщъыьэюя абвг
-ежзиклмнопрстуфхцчшщъыьэюя абвгд
-жзиклмнопрстуфхцчшщъыьэюя абвгде
-зиклмнопрстуфхцчшщъыьэюя абвгдеж
-иклмнопрстуфхцчшщъыьэюя абвгдежз
-клмнопрстуфхцчшщъыьэюя абвгдежзи
-лмнопрстуфхцчшщъыьэюя абвгдежзик
-мнопрстуфхцчшщъыьэюя абвгдежзикл
-нопрстуфхцчшщъыьэюя абвгдежзиклм
-опрстуфхцчшщъыьэюя абвгдежзиклмн
-прстуфхцчшщъыьэюя абвгдежзиклмно
-рстуфхцчшщъыьэюя абвгдежзиклмноп
-стуфхцчшщъыьэюя абвгдежзиклмнопр
-туфхцчшщъыьэюя абвгдежзиклмнопрс
-уфхцчшщъыьэюя абвгдежзиклмнопрст
-фхцчшщъыьэюя абвгдежзиклмнопрсту
-хцчшщъыьэюя абвгдежзиклмнопрстуф
-цчшщъыьэюя абвгдежзиклмнопрстуфх
-чшщъыьэюя абвгдежзиклмнопрстуфхц
-шщъыьэюя абвгдежзиклмнопрстуфхцч
-щъыьэюя абвгдежзиклмнопрстуфхцчш
-ъыьэюя абвгдежзиклмнопрстуфхцчшщ
-ыьэюя абвгдежзиклмнопрстуфхцчшщъ
-ьэюя абвгдежзиклмнопрстуфхцчшщъы
-эюя абвгдежзиклмнопрстуфхцчшщъыь
-юя абвгдежзиклмнопрстуфхцчшщъыьэ
-я абвгдежзиклмнопрстуфхцчшщъыьэю
- ABCDEFGHIJKLMNOPQRSTUVWXYZ</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>336, 17</value>
